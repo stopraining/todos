@@ -212,7 +212,8 @@ input[type="text"].edit_form {
 /*flash message*/
 .error_message {
   width: 100%;
-  color: rgb(177, 31, 31);
+  /*color: rgb(177, 31, 31);*/
+  color: rgb(119, 0, 0);
   background-color: pink;
   font-size: 14pt;
   margin-bottom: 10px;

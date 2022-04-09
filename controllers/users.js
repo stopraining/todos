@@ -53,8 +53,11 @@ module.exports = {
 
         if (email.length > 0 & username.length > 0 & password.length > 0) {
             let sql = "SELECT * FROM users WHERE email=? "
-            let strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})");
+            //let strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})");
 
+            let strongRegex_capital = new RegExp("(?=.*[A-Z])")
+            let strongRegex_number = new RegExp("(?=.*[0-9])")
+            let strongRegex_len = new RegExp("(?=.{8,})")
 
             db.get(sql, email, function (err, row) {
                 if (err) {
@@ -65,9 +68,17 @@ module.exports = {
                     return res.redirect('/users/register')
 
                 } else {
-                    if (!strongRegex.test(password)) {   //password strength
-                        console.log('Password strngth')
-                        req.flash('error_msg', 'Password setting error! Please read the password requirement below. Thanks.')
+                    if (!strongRegex_capital.test(password) | !strongRegex_number.test(password) | !strongRegex_len.test(password)) {   //password strength
+                        if (!strongRegex_capital.test(password)) {
+                            req.flash('error_msg', 'At least one capital letter.')
+                        }
+                        if (!strongRegex_number.test(password)) {
+                            req.flash('error_msg', 'At least one number.')
+                        }
+                        if (!strongRegex_len.test(password)) {
+                            req.flash('error_msg', 'At least 8 characters.')
+                        }
+                        //req.flash('error_msg', 'Password setting error! Please read the password requirement below. Thanks.')
                         return res.redirect('/users/register')
                     }
                     let now = new Date()
@@ -85,13 +96,13 @@ module.exports = {
         if (email.length == 0 | username.length == 0 | password.length == 0) {
             //flash
             if (email.length == 0) {
-                req.flash('error_msg', 'Incorrect email. &#10060;&#128231;')
+                req.flash('error_msg', 'Invalid email. &#10060;&#128231;')
             }
             if (username.length == 0) {
-                req.flash('error_msg', 'Incorrect username. &#10060;&#128561;')
+                req.flash('error_msg', 'Invalid username. &#10060;&#128561;')
             }
             if (password.length == 0) {
-                req.flash('error_msg', 'Incorrect password. &#10060;&#128274;')
+                req.flash('error_msg', 'Invalid password. &#10060;&#128274;')
             }
             return res.redirect('/users/register')
         }
