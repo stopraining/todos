@@ -1,0 +1,62 @@
+<%- include ./header %>
+
+    <div class="welcome_title">
+        <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <a class="logout_text" href="/users/logout">logout</a>
+
+        </div>
+
+        <p class="title_text">
+            <b class="name_text">
+                <%= username%>'s
+            </b> Todo List &#128196;
+        </p>
+    </div>
+
+
+    <div class="up">
+        <div class="add_item">
+            <p class="add_text">Add Item:</p>
+            <form action="/add/<%= user_id %>" method="POST">
+                <input class="add_form" type="text" id="addtodo" name="addtodo" value="">
+                <input class="add_form" type="submit" value="+">
+            </form>
+        </div>
+    </div>
+
+    <% if(notify_msg.length>0) { %>
+        <div class="notify_message">
+            <p>
+                <%= notify_msg%>
+            </p>
+        </div>
+        <% } %>
+
+            <div class="todo">
+                <ul class="list">
+                    <% for (const r of row) { %>
+                        <li class="list">
+                            <div class="todo_text">
+                                <span>
+                                    <%= r.todo %>
+                                </span>
+                            </div>
+                            <div class="time">
+                                <span>
+                                    <%= r.createTime %>
+                                </span>
+                            </div>
+                            <div class="btn">
+
+                                <a class="edit_btn" href="/edit/<%= r.id%>">edit</a>
+                                <a class="delete_btn" href="/delete/<%= r.id%>">delete</a>
+
+                            </div>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+
+
+            <%- include ./footer %>

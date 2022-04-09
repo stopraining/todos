@@ -1,0 +1,31 @@
+<%- include ./header %>
+    <div class="login">
+        <p class=" login_title">Login</p>
+        <% if(error_msg) { %>
+            <div class="error_message">
+                <%= error_msg %>
+            </div>
+            <% } %>
+                <% if(success_msg) { %>
+                    <div class="success_message">
+                        <%= success_msg %>
+                    </div>
+                    <% } %>
+                        <br>
+                        <form method="POST" action="/users/auth">
+                            <label for="email">
+                                <i class="fas fa-user"></i>
+                            </label>
+                            <input class="login_form" type="text" name="email" id="email" placeholder="Email"><br><br>
+                            <label for="password">
+                                <i class="fas fa-lock"></i>
+                            </label>
+                            <input class="login_form" type="password" name="password" id="password"
+                                placeholder="Password"><br><br>
+                            <input class="login_form" type="submit" value="Login">
+                        </form>
+                        <br>
+                        <p class="go_register">No Account?&#128073;&#127995; <a href="/users/register">Register</a></p>
+    </div>
+
+    <%- include ./footer %>

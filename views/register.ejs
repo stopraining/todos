@@ -1,0 +1,37 @@
+<%- include ./header %>
+    <div class="login">
+        <p class="login_title">Register</p>
+        <br>
+
+        <% if ( error_msg.length> 0 ) { %>
+            <% error_msg.forEach((msg)=>{%>
+                <div class="error_message">
+                    <%= msg %>
+                </div>
+                <% }) %>
+                    <% } %>
+
+                        <form method="POST" action="/users/register">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                            </label>
+                            <input class="login_form" type="text" name="email" id="email" placeholder="Email"><br><br>
+                            <label for="email">
+                                <i class="fas fa-user"></i>
+                            </label>
+                            <input class="login_form" type="text" name="username" id="username"
+                                placeholder="Username"><br><br>
+                            <label for="password">
+                                <i class="fas fa-lock"></i>
+                            </label>
+                            <input class="login_form" type="password" name="password" id="password"
+                                placeholder="Password"><br><br>
+                            <span class="password_strength">Pasword Requirement:<br>
+                                <span class="password_strength">💡At least one capital letter.</span><br>
+                                <span class="password_strength">💡At least one number.</span><br><br>
+                                <input class="login_form" type="submit" value="Confirm">
+
+                        </form>
+                        <p class="go_register"><a href="/users/login">Back To Login</a></p>
+    </div>
+    <%- include ./footer %>

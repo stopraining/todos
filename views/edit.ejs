@@ -1,0 +1,12 @@
+<%- include ./header %>
+    <div class="edit">
+        <p class="edit_title">Edit item &#128394;</p>
+        <form class="edit_form" action="/edit" method="POST">
+            <input class="edit_form" type="text" id="" name="edit_content" value="">
+            <input type="hidden" name="id" value="<%=edit_id %>"><br><br><br>
+            <input class="edit_form" type="submit" value="Confirm">
+        </form>
+        <button class='edit_cancel_btn' onclick="window.location='/users'">Cancel</button>
+    </div>
+
+    <%- include ./footer %>
