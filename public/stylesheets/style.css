@@ -1,68 +1,67 @@
-*{
+* {
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
-  font: 16px  "Times New Roman", Times, serif;
+  font: 16px "Times New Roman", Times, serif;
 }
 
 body {
-  background-color:rgb(255, 234, 189);
+  background-color: rgb(255, 234, 189);
   width: 100%;
-  
 }
 
 /*no scroll bar*/
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* index */
 
-.welcome_title{
+.welcome_title {
   width: 70%;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   margin-bottom: 0px;
   padding: 0;
 }
 
-.up{
+.up {
 
-  margin:0px auto;
+  margin: 0px auto;
   width: 70%;
   height: 100px;
 
 }
 
-.add_item{
+.add_item {
   float: right;
   padding: 5px;
-  
+
 }
 
-.todo{
+.todo {
   width: 70%;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   padding: 0;
-  
+
 }
 
-.todo_text{
+.todo_text {
   display: inline-block;
   width: 40%;
 }
 
-.time{
+.time {
   display: inline-block;
   position: absolute;
   right: 22%;
   margin-top: 10px;
-  
-  
+
+
 }
 
-.btn{
+.btn {
   display: inline-block;
   position: absolute;
   right: 16%;
@@ -70,12 +69,12 @@ body::-webkit-scrollbar {
 }
 
 
-/* login & register */ 
-.login{
+/* login & register */
+.login {
   font-size: 25pt;
   background-color: white;
   opacity: 0.7;
-  margin:0px auto;
+  margin: 0px auto;
   width: 30%;
   padding: 10px;
   padding-bottom: 40px;
@@ -83,7 +82,7 @@ body::-webkit-scrollbar {
   border-radius: 10px;
 }
 
-.login_title{
+.login_title {
   text-align: center;
   font-size: 50pt;
   margin-top: 0;
@@ -92,27 +91,27 @@ body::-webkit-scrollbar {
   font-family: 'Caveat';
 }
 
-.go_register{
+.go_register {
   text-align: center;
   font-size: 16pt;
-  font-weight: 800 ;
+  font-weight: 800;
 }
 
-.go_register a{
+.go_register a {
   text-decoration: none;
   color: black;
   font-size: 20pt;
   font-family: 'Caveat';
-  font-weight: 800 ;
+  font-weight: 800;
 }
 
 
 /* edit */
-.edit{
+.edit {
   font-size: 25pt;
-  background-color:white;
+  background-color: white;
   opacity: 0.7;
-  margin:0px auto;
+  margin: 0px auto;
   width: 30%;
   padding: 20pt;
   padding-bottom: 50px;
@@ -120,7 +119,7 @@ body::-webkit-scrollbar {
   border-radius: 10px;
 }
 
-.edit_title{
+.edit_title {
   margin: 0;
   margin-bottom: 40pt;
   text-align: center;
@@ -129,31 +128,31 @@ body::-webkit-scrollbar {
   font-family: 'Caveat';
 }
 
-.edit_form{
+.edit_form {
   display: inline;
   width: 100%;
 }
 
-label{
+label {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-input[type="text"].login_form{
+input[type="text"].login_form {
   border-radius: 5pt;
   padding: 12px 20px;
   width: 80%;
   height: 15px;
 }
 
-input[type="password"].login_form{
+input[type="password"].login_form {
   border-radius: 5pt;
   padding: 12px 20px;
   height: 15px;
   width: 80%;
 }
 
-input[type="submit"].login_form{
+input[type="submit"].login_form {
   background-color: black;
   color: white;
   width: 89%;
@@ -166,29 +165,29 @@ input[type="submit"].login_form{
 
 
 
-input[type="submit"].add_form{
-  background:none;
+input[type="submit"].add_form {
+  background: none;
   border: none;
-  font-weight:800 ;
+  font-weight: 800;
   font-size: 20px;
-  
+
 }
 
-input[type="submit"].add_form:hover{
-  color:coral ;
+input[type="submit"].add_form:hover {
+  color: coral;
 }
 
-input[type="text"].add_form{
+input[type="text"].add_form {
   border-radius: 5px;
   font-size: 20px;
   border: 2px solid rgb(177, 166, 166);
 }
 
-input[type="submit"].edit_form{
-  border:none;
-  background:coral;
+input[type="submit"].edit_form {
+  border: none;
+  background: coral;
   color: white;
-  font-weight:500 ;
+  font-weight: 500;
   font-size: 20pt;
   border-radius: 10px;
   font-family: 'Caveat';
@@ -196,12 +195,12 @@ input[type="submit"].edit_form{
   float: left;
 }
 
-input[type="submit"].edit_form:hover{
+input[type="submit"].edit_form:hover {
   border: 2px solid black;
-  
+
 }
 
-input[type="text"].edit_form{
+input[type="text"].edit_form {
   border-radius: 5px;
   font-size: 20px;
   width: 100%;
@@ -211,7 +210,7 @@ input[type="text"].edit_form{
 }
 
 /*flash message*/
-.error_message{
+.error_message {
   width: 100%;
   color: rgb(177, 31, 31);
   background-color: pink;
@@ -220,47 +219,47 @@ input[type="text"].edit_form{
   margin-top: 10px;
 }
 
-.success_message{
+.success_message {
   width: 100%;
-  background-color:rgb(253, 255, 116);
+  background-color: rgb(253, 255, 116);
   font-size: 14pt;
 }
 
-.notify_message{
+.notify_message {
   width: 100%;
   text-align: center;
   font-size: 30pt;
-  
+
 }
 
 
 /*home page*/
-.name_text{
-  color:coral;
+.name_text {
+  color: coral;
   font-family: 'Caveat';
   font-size: 40pt;
   font-weight: 700;
 }
 
-.title_text{
+.title_text {
   font-size: 30pt;
   font-weight: 800;
-  color :darkslategray;
+  color: darkslategray;
   font-family: 'Caveat';
 }
 
-.add_text{
+.add_text {
   font-family: 'Caveat';
   font-size: 18pt;
   font-weight: 800;
   margin-bottom: 0;
   color: saddlebrown;
-  
+
 }
 
 ul.list {
   list-style-type: none;
-  
+
 }
 
 li.list {
@@ -276,13 +275,13 @@ li.list {
   height: 40px;
 }
 
-ul.list :hover{
-  background-color:rgb(254, 255, 172);
+ul.list :hover {
+  background-color: rgb(254, 255, 172);
 }
 
 
 .delete_btn {
-  background-color: coral; 
+  background-color: coral;
   border: none;
   color: white;
   text-align: center;
@@ -292,12 +291,12 @@ ul.list :hover{
   margin-top: 5px;
 }
 
-.list :hover .delete_btn{
-  background-color:coral;
+.list :hover .delete_btn {
+  background-color: coral;
 }
 
 .edit_btn {
-  background-color: darkslategray; 
+  background-color: darkslategray;
   border: none;
   color: white;
   text-align: center;
@@ -306,31 +305,31 @@ ul.list :hover{
   font-size: 16px;
 }
 
-.list :hover .edit_btn{
-  background-color:darkslategray;
+.list :hover .edit_btn {
+  background-color: darkslategray;
 }
 
-.edit_cancel_btn{
-  background:black;
+.edit_cancel_btn {
+  background: black;
   color: aliceblue;
   border: none;
-  font-weight:500 ;
+  font-weight: 500;
   font-size: 20pt;
   border-radius: 10px;
   font-family: 'Caveat';
-  float:right;
+  float: right;
   width: 45%;
 }
 
-.edit_cancel_btn:hover{
+.edit_cancel_btn:hover {
   border: 2px solid black;
 }
 
-.logout{
+.logout {
   float: right;
 }
 
-.logout_text{
+.logout_text {
   text-decoration: none;
   color: darkblue;
   font-size: 20pt;
@@ -340,11 +339,12 @@ ul.list :hover{
 }
 
 /*index*/
-.index_img_div{
+.index_img_div {
   display: inline-block;
   width: 40%;
 }
-.index_img_div img{
+
+.index_img_div img {
   width: 70%;
   display: inline-block;
   margin-left: 10%;
@@ -352,13 +352,13 @@ ul.list :hover{
 
 
 
-.index_start_div{
+.index_start_div {
   float: right;
   width: 60%;
   height: 50px;
 }
 
-.index_start{
+.index_start {
   margin-top: 60px;
   padding: 10px;
   color: saddlebrown;
@@ -366,7 +366,7 @@ ul.list :hover{
   font-size: 40pt;
 }
 
-.index_start a{
+.index_start a {
   font-size: 40pt;
   font-family: 'Caveat';
   text-decoration: none;
@@ -375,10 +375,10 @@ ul.list :hover{
   background-color: white;
   padding: 10px;
   font-weight: 800;
-  
+
 }
 
-.index_ps{
+.index_ps {
   background-color: white;
   opacity: 0.6;
   margin-top: 20px;
@@ -389,7 +389,7 @@ ul.list :hover{
   width: 90%;
 }
 
-.index_ps p{
+.index_ps p {
   margin-top: 20px;
   padding: 20px;
   font-size: 16pt;
@@ -397,7 +397,8 @@ ul.list :hover{
   width: 90%;
   line-height: 40px;
 }
-.password_strength{
+
+.password_strength {
   font-weight: 800;
   margin-left: 40px;
 }
