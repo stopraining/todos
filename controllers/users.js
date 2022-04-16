@@ -70,13 +70,13 @@ module.exports = {
                 } else {
                     if (!strongRegex_capital.test(password) | !strongRegex_number.test(password) | !strongRegex_len.test(password)) {   //password strength
                         if (!strongRegex_capital.test(password)) {
-                            req.flash('error_msg', 'At least one capital letter.')
+                            req.flash('error_msg', 'Password setting: At least one capital letter.')
                         }
                         if (!strongRegex_number.test(password)) {
-                            req.flash('error_msg', 'At least one number.')
+                            req.flash('error_msg', 'Password setting: At least one number.')
                         }
                         if (!strongRegex_len.test(password)) {
-                            req.flash('error_msg', 'At least 8 characters.')
+                            req.flash('error_msg', 'Password setting: At least 8 characters.')
                         }
                         //req.flash('error_msg', 'Password setting error! Please read the password requirement below. Thanks.')
                         return res.redirect('/users/register')
